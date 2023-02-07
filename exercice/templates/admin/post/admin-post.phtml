@@ -1,0 +1,24 @@
+
+
+
+<table>
+    <?php 
+    
+    foreach($database as $post){
+        
+     
+        echo "titre: ".$post->getTitle();
+        echo '<br>';
+        echo "Contenu: ".$post->getContent();
+        echo '<br>';
+        echo "Autheur: ".$post-> getAuthor();
+        echo '<br>';
+        echo "Category: ".$post->getCategory();
+        echo '<br>';
+        echo '<br>';
+        echo '<br>';
+    }
+    
+    
+    ?>
+</table>

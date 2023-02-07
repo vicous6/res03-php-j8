@@ -5,15 +5,15 @@ class Post {
     private int $id;
     private string $title ;
     private string $content;
-    private User $author;
-    private PostCategory $category;
+    private int $author;
+    private int $category;
 
 
     // public constructor
-    public function __construct(string $title,string $content,User $author,PostCategory $category)
+    public function __construct(string $title,string $content,int $author,int $category)
     {
         $this->id = -1;
-        $this->titleName = $title;
+        $this->title = $title;
         $this->content = $content;
         $this->author = $author;
         $this->category = $category;
@@ -33,11 +33,11 @@ class Post {
     {
         return $this->content;
     }
-     public function getAuthor() : User
+     public function getAuthor() : int
     {
         return $this->author;
     }
-    public function getCategory() : PostCategory
+    public function getCategory() : int
     {
         return $this->category;
     }
@@ -47,32 +47,31 @@ class Post {
     {
         $this->id = $id;
     }
-    public function SetFirstName(string $firstName) : void
+    
+    public function SetTitleName(string $titleName) : void
     {
-        $this->firstName= $firstName;
+        $this->titleName= $titleName;
     }
-     public function setLastName(string $lastName) : void
+     public function setContent(string $content) : void
     {
-        $this->lastName = $lastName;
+        $this->content = $content;
     }
-       public function setEmail(string $email) : void
+       public function setAuthor(int $author) : void
     {
-        $this->email = $email;
+        $this->author = $author;
     }
     
        public function setPassword(string $password) : void
     {
         $this->password = $password;
     }
-       public function setPosts(array $posts) : void
+       public function setCategory(int $category) : void
     {
-        $this->posts = $posts;
+        $this->posts = $category;
     }
     
     
     
-//     addPost(Post $post) : array qui ajoute le $post au tableau des posts et renvoie le tableau.
-// removePost(Post $post) : array qui retire le $post au tableau des posts et renvoie le tableau.
 
 }  
 

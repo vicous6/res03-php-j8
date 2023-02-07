@@ -73,10 +73,14 @@ class User {
     }
     
     
-    function addPost(Post $post){
-     array_push($this->posts, $post) ;  
+    function addPost(Post $post): array{
+     array_push($this->posts, $post) ; 
+     
+     return $this->posts;
     }
-     function removePost(Post $post){
+    
+    
+     function removePost(Post $post): array{
         
         $newTab =[];
         
@@ -91,8 +95,8 @@ class User {
     }
     
     
-//     addPost(Post $post) : array qui ajoute le $post au tableau des posts et renvoie le tableau.
-// removePost(Post $post) : array qui retire le $post au tableau des posts et renvoie le tableau.
+    // addPost(Post $post) : array qui ajoute le $post au tableau des posts et renvoie le tableau.
+    // removePost(Post $post) : array qui retire le $post au tableau des posts et renvoie le tableau.
 
 }  
 
